@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>location</title>
+
+</head>
+ 
+<body>
+    <form method="POST" action="/location">
+        {{ form.csrf_token }}
+        <p>
+            {{ form.answer.label }}
+            {{ form.answer(size=20) }}
+        </p>
+        {% if form.answer.errors %}
+            <ul class="errors">
+                {% for error in form.answer.errors %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <p>
+            <input type="submit" value="Submit" />  
+        </p>
+    </form>      
+    <p>           
+        {{ form.answer(disabled=True) }}
+    </p>
+    <!-- Display next_riddle and next_unique_key-->
+    {% if person == "character varying" %}
+    <h3>{{ dispnext_riddle }}</h3>
+    <h3>{{ dispnext_unique_key }}</h3>
+    {% else %}
+    <h3>{{error}}</h3>
+    {% endif %}
+
+</form>
+</body>
+</html>

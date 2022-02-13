@@ -1,6 +1,8 @@
 .git
-thbvj_env
+thbvj_env/
+thbvj_env/*
 __pycache__/
 app/__pycache__/
 postgres-data/
 postgres-data/*
+.env
