@@ -77,9 +77,9 @@ def create_timestamp_for_team_at_location(team_name,location_name):
     cur.close()
     conn.close()
 # home page <---
-@app.route('/home')
+@app.route('/')
 def home_view():
-    return render_template("index.html")
+    return render_template("home.html")
 
 # location page <---
 # location_name and location_route should be same
