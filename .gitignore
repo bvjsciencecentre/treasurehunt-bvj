@@ -6,3 +6,4 @@ app/__pycache__/
 postgres-data/
 postgres-data/*
 .env
+.env(copy 1)
