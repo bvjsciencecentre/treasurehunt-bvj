@@ -91,8 +91,8 @@ def register_with_key_bvj_entry():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/bvj_entry.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/bvj_entry.html")
+        return render_template("bvj_entry.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("bvj_entry.html")
 
 @app.route("/history", methods=["GET", "POST"])
 def register_with_key_history():
@@ -102,8 +102,8 @@ def register_with_key_history():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/history.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/history.html")
+        return render_template("history.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("history.html")
 
 @app.route("/journalism", methods=["GET", "POST"])
 def register_with_key_journalism():
@@ -113,8 +113,8 @@ def register_with_key_journalism():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/journalism.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/journalism.html")
+        return render_template("journalism.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("journalism.html")
 
 @app.route("/biology", methods=["GET", "POST"])
 def register_with_key_biology():
@@ -124,8 +124,8 @@ def register_with_key_biology():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/biology.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/biology.html")
+        return render_template("biology.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("biology.html")
 
 @app.route("/math", methods=["GET", "POST"])
 def register_with_key_math():
@@ -135,8 +135,8 @@ def register_with_key_math():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/math.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/math.html")
+        return render_template("math.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("math.html")
 
 @app.route("/physics", methods=["GET", "POST"])
 def register_with_key_physics():
@@ -146,8 +146,8 @@ def register_with_key_physics():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/physics.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/physics.html")
+        return render_template("physics.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("physics.html")
 
 @app.route("/psychology", methods=["GET", "POST"])
 def register_with_key_psychology():
@@ -157,8 +157,8 @@ def register_with_key_psychology():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/psychology.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/psychology.html")
+        return render_template("psychology.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("psychology.html")
 
 @app.route("/iot", methods=["GET", "POST"])
 def register_with_key_iot():
@@ -168,8 +168,8 @@ def register_with_key_iot():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/iot.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/iot.html")
+        return render_template("iot.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("iot.html")
 
 @app.route("/english", methods=["GET", "POST"])
 def register_with_key_english():
@@ -179,8 +179,8 @@ def register_with_key_english():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/english.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/english.html")
+        return render_template("english.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("english.html")
 
 @app.route("/electronics", methods=["GET", "POST"])
 def register_with_key_electronics():
@@ -190,8 +190,8 @@ def register_with_key_electronics():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/electronics.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/electronics.html")
+        return render_template("electronics.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("electronics.html")
 
 @app.route("/chemistry", methods=["GET", "POST"])
 def register_with_key_chemistry():
@@ -201,8 +201,8 @@ def register_with_key_chemistry():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/chemistry.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/chemistry.html")
+        return render_template("chemistry.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("chemistry.html")
 
 @app.route("/bvj_exit", methods=["GET", "POST"])
 def register_with_key_bvj_exit():
@@ -212,8 +212,8 @@ def register_with_key_bvj_exit():
 
         team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
         create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("/bvj_exit.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("/bvj_exit.html")
+        return render_template("bvj_exit.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+    return render_template("bvj_exit.html")
 
 @app.route("/register", methods=["GET", "POST"])
 def register_team_name():
@@ -223,5 +223,5 @@ def register_team_name():
         team_name = request.form.get("team_name")
 
         first_key = create_team_data(team_name)
-        return render_template("/register.html", team_name=team_name, next_unique_key=first_key)
-    return render_template("/register.html")
+        return render_template("register.html", team_name=team_name, next_unique_key=first_key)
+    return render_template("register.html")
