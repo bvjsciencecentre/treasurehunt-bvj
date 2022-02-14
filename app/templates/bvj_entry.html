@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>bvj_entry</title>
+
+</head>
+ 
+<body>
+        <form action="/bvj_entry" method="POST">
+  
+          <div class="form-group">
+            <label>Enter unique Key</label>
+            <input type="text" class="form-control" id="entered_unique_key" name="entered_unique_key" placeholder="Enter unique key">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+  
+        </form>
+        {% if team_name %}
+            <p class="text-danger float-right">{{ team_name }}</p>
+        {% endif %}
+        {% if next_riddle %}
+            <p class="text-danger float-right">{{ next_riddle }}</p>
+        {% endif %}
+        {% if next_unique_key %}
+            <p class="text-danger float-right">{{ next_unique_key }}</p>
+        {% endif %}
+  
+
+</form>
+</body>
+</html>

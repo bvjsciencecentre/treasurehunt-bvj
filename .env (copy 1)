@@ -1,0 +1,13 @@
+export FLASK_CONFIG-development
+export FLASK_ENV=development
+
+# set this 0 in production
+export FLASK_DEBUG = 1
+
+# postgresql database uri
+DB_USERNAME = "postgres"
+DB_PASSWORD = "neo"
+DB_URL = "localhost"
+DB_NAME = "th"
+
+#DB_URL = "localhost:5432"

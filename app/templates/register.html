@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <title>register</title>
+
+</head>
+ 
+<body>
+        <form action="/register" method="POST">
+  
+          <div class="form-group">
+              <h1>Register for Treasure Hunt</h1>
+            <label>Enter team name</label>
+            <input type="text" class="form-control" id="team_name" name="team_name" placeholder="Enter team name">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+  
+        </form>
+        {% if team_name %}
+            <p class="text-danger float-right">Registered your {{ team_name }} successfully.</p>
+        {% endif %}
+        {% if next_riddle %}
+            <p class="text-danger float-right">{{ next_riddle }}</p>
+        {% endif %}
+        {% if next_unique_key %}
+            <p class="text-danger float-right">{{ next_unique_key }}</p>
+        {% endif %}
+  
+
+</form>
+</body>
+</html>
