@@ -76,6 +76,7 @@ def create_timestamp_for_team_at_location(team_name,location_name):
         print (err)
     cur.close()
     conn.close()
+
 # home page <---
 @app.route('/')
 def home_view():

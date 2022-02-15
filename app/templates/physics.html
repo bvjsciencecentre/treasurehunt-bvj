@@ -11,7 +11,8 @@
                         <div class="col-lg-6 order-lg-1">
                             <div class="p-5">
                                 <br><br>
-                                <label>Enter the unique key</label>
+                                <b>You are at physics node</b><br><br>
+                                <label>Enter the unique key you got at the previous location</label> 
                                 <input type="text" class="form-control" id="entered_unique_key" name="entered_unique_key" placeholder="enter the unique key">
                                 <button type="submit" class="btn btn-primary btn-x2 rounded-pill mt-2">Submit</button>
                             </div>                        
@@ -26,6 +27,7 @@
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
+                            <p>Your team name</p>
                             <p class="d-block p-2 bg-secondary text-white">{{ team_name }}</p>
                         </div>                        
                     </div>                    
@@ -39,7 +41,7 @@
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
-                            <p>Riddle</p>
+                            <p>Your next riddle</p>
                             <p class="d-block p-2 bg-secondary text-white">{{ next_riddle }}</p>
                         </div>                        
                     </div>                    
@@ -53,8 +55,8 @@
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
-                            <p>Please Screenshot or save this key</p>
-                            <p class="d-block p-2 bg-secondary text-white">Your next key - {{ next_unique_key }}</p>
+                            <p>Your next unique key(Please screenshot or save this key)</p> 
+                            <p class="d-block p-2 bg-secondary text-white">{{ next_unique_key }}</p>
                         </div>                        
                     </div>                    
                 </div>

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
  
-{% block title %}Register your team{% endblock %}
+{% block title %}Register your team name{% endblock %}
  
 <body>
     {% block content %}
@@ -11,8 +11,8 @@
                         <div class="col-lg-6 order-lg-1">
                             <div class="p-5">
                                 <br><br>
-                                <h2 class="display-4">Register your team</h2>
-                                <label>Enter your team name</label>
+                                <h2 class="display-4">Register your team name</h2>
+                                <b>Enter your team name</b>
                                 <input type="text" class="form-control" id="team_name" name="team_name" placeholder="Enter team name">
                                 <button type="submit" class="btn btn-primary btn-x2 rounded-pill mt-2">Submit</button>
                             </div>                        
@@ -40,8 +40,8 @@
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
-                            <p>Please Screenshot or save this key</p>
-                            <p class="d-block p-2 bg-secondary text-white">Your next key - {{ next_unique_key }}</p>
+                            <b>Your next unique key(Please screenshot or save this key)</b> 
+                            <p class="d-block p-2 bg-secondary text-white">{{ next_unique_key }}</p>
                         </div>                        
                     </div>                    
                 </div>
