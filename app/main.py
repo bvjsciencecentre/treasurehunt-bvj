@@ -98,14 +98,22 @@ def register_team_name():
 # location_name and location_route should be same
 @app.route("/bvj_entry", methods=["GET", "POST"])
 def register_with_key_bvj_entry():
-    location_name = "bvj_entry"
-    if request.method == "POST":
-        entered_unique_key = request.form.get("entered_unique_key")
+    # format - datetime(year,month,date,hour,min,sec) 
+    event_start_time = datetime(2022, 2, 16, 12, 00, 00, 000000)
+    present_time = datetime.now()
+    countdown_time = event_start_time - present_time
+    if event_start_time > present_time:
+        return render_template("wait.html", event_start_time=event_start_time)
+    else:
+        #print("game starts now")
+        location_name = "bvj_entry"
+        if request.method == "POST":
+            entered_unique_key = request.form.get("entered_unique_key")
 
-        team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
-        create_timestamp_for_team_at_location(team_name,location_name)
-        return render_template("bvj_entry.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
-    return render_template("bvj_entry.html")
+            team_name, next_riddle, next_unique_key = check_key_and_get_next_riddle(entered_unique_key, location_name)
+            create_timestamp_for_team_at_location(team_name,location_name)
+            return render_template("bvj_entry.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
+        return render_template("bvj_entry.html")
 
 @app.route("/history", methods=["GET", "POST"])
 def register_with_key_history():
