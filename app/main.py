@@ -8,7 +8,8 @@ from flask_wtf import FlaskForm
 from wtforms import (StringField)
 from wtforms.validators import InputRequired, Length
 from flask import request
-from datetime import datetime
+from datetime import datetime, tzinfo
+import zoneinfo 
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -82,7 +83,18 @@ def create_timestamp_for_team_at_location(team_name,location_name):
 def home_view():
     return render_template("home.html")
 
-# location page <---
+@app.route("/register", methods=["GET", "POST"])
+def register_team_name():
+    from app.generate_data_for_team import create_team_data
+    if request.method == "POST":
+        if request.form.get("team_name") != "":
+            team_name = request.form.get("team_name")
+
+            first_key = create_team_data(team_name)
+            return render_template("register.html", team_name=team_name, next_unique_key=first_key)
+    return render_template("register.html")
+
+# location pages <---
 # location_name and location_route should be same
 @app.route("/bvj_entry", methods=["GET", "POST"])
 def register_with_key_bvj_entry():
@@ -215,14 +227,3 @@ def register_with_key_bvj_exit():
         create_timestamp_for_team_at_location(team_name,location_name)
         return render_template("bvj_exit.html", team_name=team_name, next_riddle=next_riddle, next_unique_key=next_unique_key)
     return render_template("bvj_exit.html")
-
-@app.route("/register", methods=["GET", "POST"])
-def register_team_name():
-    from app.generate_data_for_team import create_team_data
-    location_name = "bvj_exit"
-    if request.method == "POST":
-        team_name = request.form.get("team_name")
-
-        first_key = create_team_data(team_name)
-        return render_template("register.html", team_name=team_name, next_unique_key=first_key)
-    return render_template("register.html")

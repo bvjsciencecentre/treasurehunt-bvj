@@ -21,48 +21,29 @@
                 </div>
             </section>
         </form>
-        {% if team_name %}
-        <section id="scroll">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h4>Your team name</h4> 
-                            <p class="d-block p-2 bg-dark text-white">{{ team_name }}</p>
-                        </div>                        
-                    </div>                    
-                </div>
-            </div>
-        </section>          
-        {% endif %}
+
         {% if next_riddle %}
         <section id="scroll">
             <div class="container px-5">
                 <div class="row gx-5 align-items-center">
                     <div class="col-lg-6 order-lg-1">
                         <div class="p-5">
-                            <h4>Your next riddle</h4>
-                            <p class="d-block p-2 bg-dark text-white">{{ next_riddle }}</p>
+                            <div class="text-center"><img src="/static/cat-waving.gif" width="320" height="240"  class="fluid" frameBorder="1"></div><br>
+                            <blockquote class="blockquote">
+                                <p class="pb-3 ">
+                                  <i class="fas fa-quote-left fa-xs text-primary"></i>
+                                  <span class="font-weight-bold font-italic">{{ next_riddle }}</span>
+                                  <i class="fas fa-quote-right fa-xs text-primary"></i>
+                                </p>
+                            </blockquote>
                         </div>                        
                     </div>                    
                 </div>
             </div>
         </section>          
         {% endif %}
-        {% if next_unique_key %}
-        <section id="scroll">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6 order-lg-1">
-                        <div class="p-5">
-                            <h4>Your next unique key(Please screenshot or save this key)</h4>
-                            <p class="d-block p-2 bg-dark text-white">{{ next_unique_key }}</p>
-                        </div>                        
-                    </div>                    
-                </div>
-            </div>
-        </section> 
-        {% endif %}
+        
 
-{% endblock %}
+
+    {% endblock %}
 </body>
