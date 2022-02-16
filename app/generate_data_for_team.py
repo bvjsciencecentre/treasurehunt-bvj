@@ -97,10 +97,10 @@ def upload_ordered_location_name(team_name, ordered_location_list):
 def create_team_data(team_identifier):
     locations_list = ["bvj_entry", "history", "journalism", "biology", "math", "physics", "psychology", "iot", "english", "electronics", "chemistry", "bvj_exit"]
     questions_list = ["This is an entry question doesn't matter", "Stories as told by our ancestors in the old stone building.",
-            "House of public, republic, ANI, etc.,", 
+            "House/Lab of public, republic, ANI, etc.,", 
             "Dissection of life through what it holds.", 
-            "PG club of universal language.", 
-            "A parliament of extremely long & complicated formulas to describe how a ball rolls.", 
+            "UG Lab of a Universal language.", 
+            "A UG Lab of extremely long & complicated formulas to describe how a ball rolls.", 
             "There they tell what I know about me in the words that I don’t follow.", 
             "Laboratory of talking machines.", 
             "House of commons.", 
@@ -110,7 +110,7 @@ def create_team_data(team_identifier):
     location_to_question_dict = {}
     for i in range(len(locations_list)):
         location_to_question_dict[locations_list[i]] = questions_list[i]
-    #print(locations_list)
+    print(locations_list)
     ordered_location_list = generate_location_list(locations_list)
     location_to_key_dict = {}
     for location in ordered_location_list:
