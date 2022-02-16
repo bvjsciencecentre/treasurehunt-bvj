@@ -99,7 +99,7 @@ def register_team_name():
 @app.route("/bvj_entry", methods=["GET", "POST"])
 def register_with_key_bvj_entry():
     # format - datetime(year,month,date,hour,min,sec) 
-    event_start_time = datetime(2022, 2, 16, 12, 00, 00, 000000)
+    event_start_time = datetime(2022, 2, 16, 12, 10, 00, 000000)
     present_time = datetime.now()
     countdown_time = event_start_time - present_time
     if event_start_time > present_time:
